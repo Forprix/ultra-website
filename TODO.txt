@@ -1,0 +1,1 @@
+В start.sh: проверка запущен ли Docker Desktop

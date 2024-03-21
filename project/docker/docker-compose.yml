@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  main:
+    build: .
+    volumes:
+      - ../code:/code
+      - frontend-node-modules:/code/frontend/node_modules
+      - backend-node-modules:/code/backend/node_modules
+    ports:
+      - 80:3000
+    working_dir: /code
+    entrypoint: ./prod.sh
+volumes:
+  frontend-node-modules:
+  backend-node-modules:
